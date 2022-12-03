@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "functions.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
+# 1 "functions.c" 2
+# 1 "./functions.h" 1
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1853,9 +1854,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 2 3
-# 1 "main.c" 2
-
-# 1 "./functions.h" 1
+# 1 "./functions.h" 2
 
 
 
@@ -1875,30 +1874,33 @@ extern __bank0 __bit __timeout;
 void TEST_PORTS(void);
 void InitApp(void);
 void SendCMD(char cmd);
-# 2 "main.c" 2
+# 1 "functions.c" 2
 
 
-void WriteChar(char character);
-
-void main(void) {
-    while(1){
-        InitApp();
-
-
-        PORTEbits.RE0 = 1;
-        _delay((unsigned long)((1000)*(4000000/4000.0)));
-        SendCMD(0b00110000);
-        PORTEbits.RE0 =0;
-
-
-
-    }
+void TEST_PORTS(void){
+    PORTD = 0XFF;
+    _delay((unsigned long)((1000)*(4000000/4000.0)));
+    PORTD = 0;
+    _delay((unsigned long)((1000)*(4000000/4000.0)));
+    PORTEbits.RE2 = 1;PORTEbits.RE1 = 1; PORTEbits.RE0 = 1;
+    _delay((unsigned long)((1000)*(4000000/4000.0)));
+    PORTEbits.RE2 = 0; PORTEbits.RE1 = 0; PORTEbits.RE0 = 0;
+    _delay((unsigned long)((1000)*(4000000/4000.0)));
 }
 
-void WriteChar(char character){
-    PORTEbits.RE0 = 1;
+void SendCMD(char cmd){
+    PORTD = cmd;
+    PORTEbits.RE2 = 1;
     _delay((unsigned long)((1000)*(4000000/4000.0)));
-    SendCMD(character);
-    _delay((unsigned long)((1000)*(4000000/4000.0)));
-    PORTEbits.RE0 = 0;
+    PORTEbits.RE2 = 0;
+    PORTD = 0;
+}
+
+void InitApp(void){
+    TRISEbits.TRISE2 = 0;
+    TRISEbits.TRISE1 = 0;
+    TRISEbits.TRISE0 = 0;
+    TRISD = 0X00;
+
+    SendCMD(0b00001000 | 0b00000100 | 0b00000010 | 0b00000001);
 }

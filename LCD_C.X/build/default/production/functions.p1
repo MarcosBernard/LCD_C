@@ -1,8 +1,11 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"34 ./functions.h
-[; ;./functions.h: 34: void InitApp(void);
-[v _InitApp `(v ~T0 @X0 0 ef ]
+"341 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 341: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+[v F36 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\builtins.h
+[v __delay `JF36 ~T0 @X0 0 e ]
+[p i __delay ]
 "409 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 409:     struct {
 [s S14 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -14,13 +17,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "415
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 415: extern volatile PORTEbits_t PORTEbits __attribute__((address(0x009)));
 [v _PORTEbits `VS13 ~T0 @X0 0 e@9 ]
-[v F36 `(v ~T0 @X0 1 tf1`ul ]
-"12 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\builtins.h
-[v __delay `JF36 ~T0 @X0 0 e ]
-[p i __delay ]
-"35 ./functions.h
-[; ;./functions.h: 35: void SendCMD(char cmd);
-[v _SendCMD `(v ~T0 @X0 0 ef1`uc ]
+"1568
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1568:     struct {
+[s S62 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S62 . TRISE0 TRISE1 TRISE2 . PSPMODE IBOV OBF IBF ]
+"1567
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1567: typedef union {
+[u S61 `S62 1 ]
+[n S61 . . ]
+"1579
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1579: extern volatile TRISEbits_t TRISEbits __attribute__((address(0x089)));
+[v _TRISEbits `VS61 ~T0 @X0 0 e@137 ]
+"1500
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1500: extern volatile unsigned char TRISD __attribute__((address(0x088)));
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
 "55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 55: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -217,65 +227,92 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x WRT  =  OFF         ]
 "15
 [p x CP  =  OFF          ]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"6 main.c
-[; ;main.c: 6: void main(void) {
-[v _main `(v ~T0 @X0 1 ef ]
+"3 functions.c
+[; ;functions.c: 3: void TEST_PORTS(void){
+[v _TEST_PORTS `(v ~T0 @X0 1 ef ]
 {
-[e :U _main ]
+[e :U _TEST_PORTS ]
 [f ]
-"7
-[; ;main.c: 7:     while(1){
-[e :U 97 ]
-{
-"8
-[; ;main.c: 8:         InitApp();
-[e ( _InitApp ..  ]
-"11
-[; ;main.c: 11:         PORTEbits.RE0 = 1;
-[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
-"12
-[; ;main.c: 12:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+"4
+[; ;functions.c: 4:     PORTD = 0XFF;
+[e = _PORTD -> -> 255 `i `uc ]
+"5
+[; ;functions.c: 5:     _delay((unsigned long)((1000)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"13
-[; ;main.c: 13:         SendCMD(0b00110000);
-[e ( _SendCMD (1 -> -> 48 `i `uc ]
-"14
-[; ;main.c: 14:         PORTEbits.RE0 =0;
+"6
+[; ;functions.c: 6:     PORTD = 0;
+[e = _PORTD -> -> 0 `i `uc ]
+"7
+[; ;functions.c: 7:     _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"8
+[; ;functions.c: 8:     PORTEbits.RE2 = 1;PORTEbits.RE1 = 1; PORTEbits.RE0 = 1;
+[e = . . _PORTEbits 0 2 -> -> 1 `i `uc ]
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
+[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
+"9
+[; ;functions.c: 9:     _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"10
+[; ;functions.c: 10:     PORTEbits.RE2 = 0; PORTEbits.RE1 = 0; PORTEbits.RE0 = 0;
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
 [e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
-"18
-[; ;main.c: 18:     }
-}
-[e :U 96 ]
-[e $U 97  ]
-[e :U 98 ]
-"19
-[; ;main.c: 19: }
+"11
+[; ;functions.c: 11:     _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"12
+[; ;functions.c: 12: }
 [e :UE 95 ]
 }
-"21
-[; ;main.c: 21: void WriteChar(char character){
-[v _WriteChar `(v ~T0 @X0 1 ef1`uc ]
+"14
+[; ;functions.c: 14: void SendCMD(char cmd){
+[v _SendCMD `(v ~T0 @X0 1 ef1`uc ]
 {
-[e :U _WriteChar ]
-[v _character `uc ~T0 @X0 1 r1 ]
+[e :U _SendCMD ]
+[v _cmd `uc ~T0 @X0 1 r1 ]
 [f ]
+"15
+[; ;functions.c: 15:     PORTD = cmd;
+[e = _PORTD -> _cmd `uc ]
+"16
+[; ;functions.c: 16:     PORTEbits.RE2 = 1;
+[e = . . _PORTEbits 0 2 -> -> 1 `i `uc ]
+"17
+[; ;functions.c: 17:     _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"18
+[; ;functions.c: 18:     PORTEbits.RE2 = 0;
+[e = . . _PORTEbits 0 2 -> -> 0 `i `uc ]
+"19
+[; ;functions.c: 19:     PORTD = 0;
+[e = _PORTD -> -> 0 `i `uc ]
+"20
+[; ;functions.c: 20: }
+[e :UE 96 ]
+}
 "22
-[; ;main.c: 22:     PORTEbits.RE0 = 1;
-[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
+[; ;functions.c: 22: void InitApp(void){
+[v _InitApp `(v ~T0 @X0 1 ef ]
+{
+[e :U _InitApp ]
+[f ]
 "23
-[; ;main.c: 23:     _delay((unsigned long)((1000)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;functions.c: 23:     TRISEbits.TRISE2 = 0;
+[e = . . _TRISEbits 0 2 -> -> 0 `i `uc ]
 "24
-[; ;main.c: 24:     SendCMD(character);
-[e ( _SendCMD (1 _character ]
+[; ;functions.c: 24:     TRISEbits.TRISE1 = 0;
+[e = . . _TRISEbits 0 1 -> -> 0 `i `uc ]
 "25
-[; ;main.c: 25:     _delay((unsigned long)((1000)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;functions.c: 25:     TRISEbits.TRISE0 = 0;
+[e = . . _TRISEbits 0 0 -> -> 0 `i `uc ]
 "26
-[; ;main.c: 26:     PORTEbits.RE0 = 0;
-[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
-"27
-[; ;main.c: 27: }
-[e :UE 99 ]
+[; ;functions.c: 26:     TRISD = 0X00;
+[e = _TRISD -> -> 0 `i `uc ]
+"28
+[; ;functions.c: 28:     SendCMD(0b00001000 | 0b00000100 | 0b00000010 | 0b00000001);
+[e ( _SendCMD (1 -> | | | -> 8 `i -> 4 `i -> 2 `i -> 1 `i `uc ]
+"29
+[; ;functions.c: 29: }
+[e :UE 97 ]
 }

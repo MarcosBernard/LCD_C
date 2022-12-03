@@ -11,17 +11,17 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\marco\AppData\Local\Temp\xcAsdc4.o
+$C:\Users\marco\AppData\Local\Temp\xcAs1nk.o
 idloc IDLOC 5 2000 2000 4 2 1
 end_init CODE 0 0 0 3 2 1
 config CONFIG 4 2007 2007 1 2 1
 $dist/default/production\LCD_C.X.production.o
 cinit CODE 0 7FC 7FC 4 2 1
 idloc IDLOC 5 2000 2000 4 2 1
-text1 CODE 0 7EA 7EA 12 2 1
-text2 CODE 0 7D4 7D4 7 2 1
-maintext CODE 0 7DB 7DB F 2 1
-cstackCOMMON COMMON 1 70 70 2 1 1
+text1 CODE 0 7B5 7B5 D 2 1
+text2 CODE 0 7C2 7C2 18 2 1
+maintext CODE 0 7DA 7DA 22 2 1
+cstackCOMMON COMMON 1 70 70 7 1 1
 config CONFIG 4 2007 2007 1 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -37,21 +37,21 @@ BANK0 20-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 3-7D3 2
+CONST 3-7B4 2
 CONST 800-1FFF 2
-ENTRY 3-7D3 2
+ENTRY 3-7B4 2
 ENTRY 800-1FFF 2
-CODE 3-7D3 2
+CODE 3-7B4 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
-COMMON 72-7D 1
+COMMON 77-7D 1
 EEDATA 2100-21FF 2
-STRCODE 3-7D3 2
+STRCODE 3-7B4 2
 STRCODE 800-1FFF 2
-STRING 3-7D3 2
+STRING 3-7B4 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -67,28 +67,32 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\LCD_C.X.production.o
-7FC cinit CODE >358:C:\Users\marco\AppData\Local\Temp\xcAsdc4.s
-7FC cinit CODE >361:C:\Users\marco\AppData\Local\Temp\xcAsdc4.s
-7FC cinit CODE >367:C:\Users\marco\AppData\Local\Temp\xcAsdc4.s
-7FC cinit CODE >369:C:\Users\marco\AppData\Local\Temp\xcAsdc4.s
-7FD cinit CODE >370:C:\Users\marco\AppData\Local\Temp\xcAsdc4.s
-7D4 text2 CODE >49:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7D4 text2 CODE >50:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7D7 text2 CODE >51:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7D8 text2 CODE >52:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7D9 text2 CODE >53:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7DA text2 CODE >54:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7EA text1 CODE >78:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7EB text1 CODE >79:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7EF text1 CODE >80:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7F0 text1 CODE >81:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7F7 text1 CODE >82:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7FA text1 CODE >83:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7FB text1 CODE >84:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7DB maintext CODE >86:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7DB maintext CODE >87:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7DB maintext CODE >88:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
-7E0 maintext CODE >90:C:\Users\marco\Documents\Proyectos\LCD\LCD_C.X\main.c
+7FC cinit CODE >479:C:\Users\marco\AppData\Local\Temp\xcAs1nk.s
+7FC cinit CODE >482:C:\Users\marco\AppData\Local\Temp\xcAs1nk.s
+7FC cinit CODE >488:C:\Users\marco\AppData\Local\Temp\xcAs1nk.s
+7FC cinit CODE >490:C:\Users\marco\AppData\Local\Temp\xcAs1nk.s
+7FD cinit CODE >491:C:\Users\marco\AppData\Local\Temp\xcAs1nk.s
+7C2 text2 CODE >14:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\functions.c
+7C3 text2 CODE >15:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\functions.c
+7C7 text2 CODE >16:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\functions.c
+7C8 text2 CODE >17:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\functions.c
+7D5 text2 CODE >18:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\functions.c
+7D8 text2 CODE >19:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\functions.c
+7D9 text2 CODE >20:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\functions.c
+7B5 text1 CODE >22:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\functions.c
+7B5 text1 CODE >23:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\functions.c
+7B8 text1 CODE >24:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\functions.c
+7B9 text1 CODE >25:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\functions.c
+7BA text1 CODE >26:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\functions.c
+7BB text1 CODE >28:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\functions.c
+7C1 text1 CODE >29:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\functions.c
+7DA maintext CODE >6:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\main.c
+7DA maintext CODE >7:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\main.c
+7DA maintext CODE >8:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\main.c
+7DF maintext CODE >11:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\main.c
+7E2 maintext CODE >12:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\main.c
+7EF maintext CODE >13:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\main.c
+7F5 maintext CODE >14:C:\Users\marco\OneDrive\Documentos\GitHub\LCD_C\LCD_C.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -103,34 +107,34 @@ $dist/default/production\LCD_C.X.production.o
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\LCD_C.X.production.o
 __Hspace_0 800 0 ABS 0 - -
-__Hspace_1 72 0 ABS 0 - -
+__Hspace_1 77 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 400F 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\marco\AppData\Local\Temp\xcAsdc4.o
-_main FB6 0 CODE 0 maintext dist/default/production\LCD_C.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\marco\AppData\Local\Temp\xcAs1nk.o
+_main FB4 0 CODE 0 maintext dist/default/production\LCD_C.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\LCD_C.X.production.o
-start 0 0 CODE 0 init C:\Users\marco\AppData\Local\Temp\xcAsdc4.o
-_SendCMD FD4 0 CODE 0 text1 dist/default/production\LCD_C.X.production.o
+start 0 0 CODE 0 init C:\Users\marco\AppData\Local\Temp\xcAs1nk.o
+_SendCMD F84 0 CODE 0 text2 dist/default/production\LCD_C.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\marco\AppData\Local\Temp\xcAsdc4.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\marco\AppData\Local\Temp\xcAsdc4.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\marco\AppData\Local\Temp\xcAsdc4.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\marco\AppData\Local\Temp\xcAsdc4.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\marco\AppData\Local\Temp\xcAsdc4.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\marco\AppData\Local\Temp\xcAsdc4.o
-_InitApp FA8 0 CODE 0 text2 dist/default/production\LCD_C.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\marco\AppData\Local\Temp\xcAs1nk.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\marco\AppData\Local\Temp\xcAs1nk.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\marco\AppData\Local\Temp\xcAs1nk.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\marco\AppData\Local\Temp\xcAs1nk.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\marco\AppData\Local\Temp\xcAs1nk.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\marco\AppData\Local\Temp\xcAs1nk.o
+_InitApp F6A 0 CODE 0 text1 dist/default/production\LCD_C.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\LCD_C.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\marco\AppData\Local\Temp\xcAsdc4.o
-___stacklo 0 0 ABS 0 - C:\Users\marco\AppData\Local\Temp\xcAsdc4.o
+___stackhi 0 0 ABS 0 - C:\Users\marco\AppData\Local\Temp\xcAs1nk.o
+___stacklo 0 0 ABS 0 - C:\Users\marco\AppData\Local\Temp\xcAs1nk.o
 start_initialization FF8 0 CODE 0 cinit dist/default/production\LCD_C.X.production.o
 _TRISEbits 89 0 ABS 0 - dist/default/production\LCD_C.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\marco\AppData\Local\Temp\xcAsdc4.o
+___int_sp 0 0 STACK 2 stack C:\Users\marco\AppData\Local\Temp\xcAs1nk.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -167,14 +171,14 @@ __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __S0 800 0 ABS 0 - -
-__S1 72 0 ABS 0 - -
+__S1 77 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\marco\AppData\Local\Temp\xcAsdc4.o
-__pmaintext FB6 0 CODE 0 maintext dist/default/production\LCD_C.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\marco\AppData\Local\Temp\xcAs1nk.o
+__pmaintext FB4 0 CODE 0 maintext dist/default/production\LCD_C.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-__end_of_SendCMD FF8 0 CODE 0 text1 dist/default/production\LCD_C.X.production.o
+__end_of_SendCMD FB4 0 CODE 0 text2 dist/default/production\LCD_C.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
@@ -186,9 +190,9 @@ end_of_initialization FF8 0 CODE 0 cinit dist/default/production\LCD_C.X.product
 __Hintentry 0 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 0 0 CODE 0 reset_vec -
-__ptext1 FD4 0 CODE 0 text1 dist/default/production\LCD_C.X.production.o
-__ptext2 FA8 0 CODE 0 text2 dist/default/production\LCD_C.X.production.o
-__end_of_InitApp FB6 0 CODE 0 text2 dist/default/production\LCD_C.X.production.o
+__ptext1 F6A 0 CODE 0 text1 dist/default/production\LCD_C.X.production.o
+__ptext2 F84 0 CODE 0 text2 dist/default/production\LCD_C.X.production.o
+__end_of_InitApp F84 0 CODE 0 text1 dist/default/production\LCD_C.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -197,13 +201,13 @@ __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\LCD_C.X.production.o
 __Hend_init 6 0 CODE 0 end_init -
-__end_of_main FD4 0 CODE 0 maintext dist/default/production\LCD_C.X.production.o
+__end_of_main FF8 0 CODE 0 maintext dist/default/production\LCD_C.X.production.o
 _PORTD 8 0 ABS 0 - dist/default/production\LCD_C.X.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\LCD_C.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __initialization FF8 0 CODE 0 cinit dist/default/production\LCD_C.X.production.o
-SendCMD@cmd 71 0 COMMON 1 cstackCOMMON dist/default/production\LCD_C.X.production.o
+SendCMD@cmd 73 0 COMMON 1 cstackCOMMON dist/default/production\LCD_C.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -230,10 +234,10 @@ SendCMD@cmd 71 0 COMMON 1 cstackCOMMON dist/default/production\LCD_C.X.productio
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7FC FF8 4 2
-text1 0 7EA FD4 12 2
-text2 0 7D4 FA8 7 2
-maintext 0 7DB FB6 F 2
-cstackCOMMON 1 70 70 2 1
+text1 0 7B5 F6A D 2
+text2 0 7C2 F84 18 2
+maintext 0 7DA FB4 22 2
+cstackCOMMON 1 70 70 7 1
 reset_vec 0 0 0 3 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

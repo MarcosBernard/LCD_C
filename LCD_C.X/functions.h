@@ -1,3 +1,4 @@
+#include <xc.h>
 
 // PIC16F877A Configuration Bit Settings
 
