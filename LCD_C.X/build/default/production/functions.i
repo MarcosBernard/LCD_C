@@ -1870,37 +1870,43 @@ extern __bank0 __bit __timeout;
 #pragma config CPD = OFF
 #pragma config WRT = OFF
 #pragma config CP = OFF
-# 33 "./functions.h"
-void TEST_PORTS(void);
+# 34 "./functions.h"
+void TEST_PORT(void);
 void InitApp(void);
 void SendCMD(char cmd);
 # 1 "functions.c" 2
 
 
-void TEST_PORTS(void){
-    PORTD = 0XFF;
-    _delay((unsigned long)((1000)*(4000000/4000.0)));
-    PORTD = 0;
-    _delay((unsigned long)((1000)*(4000000/4000.0)));
-    PORTEbits.RE2 = 1;PORTEbits.RE1 = 1; PORTEbits.RE0 = 1;
-    _delay((unsigned long)((1000)*(4000000/4000.0)));
-    PORTEbits.RE2 = 0; PORTEbits.RE1 = 0; PORTEbits.RE0 = 0;
-    _delay((unsigned long)((1000)*(4000000/4000.0)));
+void TEST_PORT(void){
+    for(char i = 1; i == 10; i++){
+
+        PORTCbits.RC2 = 1;
+        PORTCbits.RC0 = 1;
+        _delay((unsigned long)((500)*(4000000/4000.0)));
+
+        PORTCbits.RC0 = 0;
+        PORTCbits.RC2 = 0;
+        _delay((unsigned long)((500)*(4000000/4000.0)));
+    }
 }
 
 void SendCMD(char cmd){
     PORTD = cmd;
-    PORTEbits.RE2 = 1;
-    _delay((unsigned long)((1000)*(4000000/4000.0)));
-    PORTEbits.RE2 = 0;
+    PORTCbits.RC0 = 1;
+    _delay((unsigned long)((1)*(4000000/4000.0)));
+    PORTCbits.RC0 = 0;
     PORTD = 0;
 }
 
 void InitApp(void){
-    TRISEbits.TRISE2 = 0;
-    TRISEbits.TRISE1 = 0;
-    TRISEbits.TRISE0 = 0;
     TRISD = 0X00;
+    PORTD = 0X00;
+    TRISCbits.TRISC1 = 0;
+    PORTCbits.RC1 = 0;
+    TRISCbits.TRISC2 = 0;
+    PORTCbits.RC2 = 0;
+    TRISCbits.TRISC0 = 0;
+    PORTCbits.RC0 = 0;
 
     SendCMD(0b00001000 | 0b00000100 | 0b00000010 | 0b00000001);
 }

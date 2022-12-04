@@ -1,27 +1,27 @@
 #include <xc.h>
 #include "functions.h"
 
-void WriteChar(char character);
+void SendChar(char character);
 
 void main(void) {
+    //__delay_ms(1000);
+    InitApp();
+    SendChar('0');
     while(1){
-        InitApp();
-        //TEST_PORTS();
         
-        RS = 1;
-        __delay_ms(1000);
-        SendCMD(0b00110000);
-        RS =0;
+        //TEST_PORT();
         
-        
-        //WriteChar('0');
     }
 }
 
-void WriteChar(char character){
+/*
+ * Sending command control PORT
+ */
+
+void SendChar(char character){     
     RS = 1;
-    __delay_ms(1000);
+    //__delay_ms(3000);
     SendCMD(character);
-    __delay_ms(1000);
+    //__delay_ms(3000);
     RS = 0;
 }

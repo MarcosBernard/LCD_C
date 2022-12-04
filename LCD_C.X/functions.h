@@ -20,17 +20,18 @@
  * LCD PORTS
  * ---------
  */
-#define TRISRS  TRISEbits.TRISE0
-#define TRISRW  TRISEbits.TRISE1
-#define TRISEN  TRISEbits.TRISE2
-#define RS  PORTEbits.RE0
-#define RW  PORTEbits.RE1
-#define EN  PORTEbits.RE2
+#define TRISEN  TRISCbits.TRISC0
+#define TRISRW  TRISCbits.TRISC1
+#define TRISRS  TRISCbits.TRISC2
+
+#define EN  PORTCbits.RC0
+#define RW  PORTCbits.RC1
+#define RS  PORTCbits.RC2
 #define TRISPORT    TRISD
 #define PORT    PORTD
 
 
-void TEST_PORTS(void);
+void TEST_PORT(void);
 void InitApp(void);
 void SendCMD(char cmd);
 

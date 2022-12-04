@@ -1871,34 +1871,34 @@ extern __bank0 __bit __timeout;
 #pragma config CPD = OFF
 #pragma config WRT = OFF
 #pragma config CP = OFF
-# 33 "./functions.h"
-void TEST_PORTS(void);
+# 34 "./functions.h"
+void TEST_PORT(void);
 void InitApp(void);
 void SendCMD(char cmd);
 # 2 "main.c" 2
 
 
-void WriteChar(char character);
+void SendChar(char character);
 
 void main(void) {
+
+    InitApp();
+    SendChar('0');
     while(1){
-        InitApp();
-
-
-        PORTEbits.RE0 = 1;
-        _delay((unsigned long)((1000)*(4000000/4000.0)));
-        SendCMD(0b00110000);
-        PORTEbits.RE0 =0;
 
 
 
     }
 }
 
-void WriteChar(char character){
-    PORTEbits.RE0 = 1;
-    _delay((unsigned long)((1000)*(4000000/4000.0)));
+
+
+
+
+void SendChar(char character){
+    PORTCbits.RC2 = 1;
+
     SendCMD(character);
-    _delay((unsigned long)((1000)*(4000000/4000.0)));
-    PORTEbits.RE0 = 0;
+
+    PORTCbits.RC2 = 0;
 }

@@ -9,11 +9,11 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 5h		(dist/default/production\LCD_C.X.production.hex)
-  F6Ah - FFFh		(dist/default/production\LCD_C.X.production.hex)
+  F5Ch - FFFh		(dist/default/production\LCD_C.X.production.hex)
   4000h - 4007h		(dist/default/production\LCD_C.X.production.hex)
   400Eh - 400Fh		(dist/default/production\LCD_C.X.production.hex)
  Unused ranges:
-  6h - F69h
+  6h - F5Bh
   1000h - 3FFFh
   4008h - 400Dh
 
@@ -26,7 +26,8 @@
 ----------------------------------------------------------
 00000000 | H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
-00000F60 | -- -- -- -- -- -- -- -- -- -- H1 H1 H1 H1 H1 H1
+00000F50 | -- -- -- -- -- -- -- -- -- -- -- -- H1 H1 H1 H1
+00000F60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000F70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000F80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000F90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
