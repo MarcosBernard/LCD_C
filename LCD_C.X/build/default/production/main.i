@@ -1875,30 +1875,25 @@ extern __bank0 __bit __timeout;
 void TEST_PORT(void);
 void InitApp(void);
 void SendCMD(char cmd);
+void SendChar(char character);
 # 2 "main.c" 2
 
 
-void SendChar(char character);
+char mensaje[5] = {'H','O','L','A','!'};
+
+void print(char *chardir);
 
 void main(void) {
-
     InitApp();
-    SendChar('0');
+    print(&mensaje[0]);
     while(1){
-
-
 
     }
 }
 
-
-
-
-
-void SendChar(char character){
-    PORTCbits.RC2 = 1;
-
-    SendCMD(character);
-
-    PORTCbits.RC2 = 0;
+void print(char *chardir){
+    while(*chardir != 0){
+        SendChar(*chardir);
+        chardir++;
+    }
 }

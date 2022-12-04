@@ -33,3 +33,9 @@ void InitApp(void){
     // Cursor config.
     SendCMD(on_off_control | on_display | cursor_on | blink_on); 
 }
+
+void SendChar(char character){     
+    RS = 1;
+    SendCMD(character);
+    RS = 0;
+}

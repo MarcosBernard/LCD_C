@@ -34,7 +34,7 @@
 void TEST_PORT(void);
 void InitApp(void);
 void SendCMD(char cmd);
-
+void SendChar(char character);
 
 /* 
  * Send command to LCD

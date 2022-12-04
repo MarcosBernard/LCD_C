@@ -334,3 +334,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;functions.c: 35: }
 [e :UE 100 ]
 }
+"37
+[; ;functions.c: 37: void SendChar(char character){
+[v _SendChar `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _SendChar ]
+[v _character `uc ~T0 @X0 1 r1 ]
+[f ]
+"38
+[; ;functions.c: 38:     PORTCbits.RC2 = 1;
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+"39
+[; ;functions.c: 39:     SendCMD(character);
+[e ( _SendCMD (1 _character ]
+"40
+[; ;functions.c: 40:     PORTCbits.RC2 = 0;
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"41
+[; ;functions.c: 41: }
+[e :UE 101 ]
+}

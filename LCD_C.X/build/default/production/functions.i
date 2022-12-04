@@ -1874,6 +1874,7 @@ extern __bank0 __bit __timeout;
 void TEST_PORT(void);
 void InitApp(void);
 void SendCMD(char cmd);
+void SendChar(char character);
 # 1 "functions.c" 2
 
 
@@ -1909,4 +1910,10 @@ void InitApp(void){
     PORTCbits.RC0 = 0;
 
     SendCMD(0b00001000 | 0b00000100 | 0b00000010 | 0b00000001);
+}
+
+void SendChar(char character){
+    PORTCbits.RC2 = 1;
+    SendCMD(character);
+    PORTCbits.RC2 = 0;
 }
